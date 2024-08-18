@@ -9,7 +9,7 @@ import pen from './asset/pen.png';
 import checked from './asset/checked.png';
 import settings from './asset/settings.png';
 import filter from './asset/filter.png';
-import backgroundVideo from './asset/bg.mp4'; // Import your video
+import backgroundVideo from './asset/bg.mp4';  
 
 function LandingPage() {
   return (
@@ -73,9 +73,19 @@ function LandingPage() {
           </p>
         </section>
 
-        <div className="p-10 mx-52 rounded-md bg-[#3E2B50] bg-opacity-20">
-          <img src={book} alt="book" className="w-full p-4  h-content object-cover" />
-        </div>
+        <div className="relative p-10 mx-52 rounded-md bg-[#3E2B50] bg-opacity-20">
+        <img
+  src={book}
+  alt="book"
+  className="w-full p-4 h-fit object-cover transform transition-transform duration-300 hover:scale-110 rounded-lg"
+/>
+
+  <div className="absolute bottom-0 right-0 mb-4 mr-4 flex items-center bg-[#3E2B50] bg-opacity-80 text-white py-2 px-4 rounded-lg">
+    <span className="bg-gradient-to-r from-blue-500 to-purple-500 w-4 h-4 rounded-full mr-2"></span>
+    <span>Chapter complete</span>
+  </div>
+</div>
+
 
         <div className="flex justify-center space-x-6 py-12 px-52">
           <div className="flex flex-col items-center text-center">
@@ -156,7 +166,7 @@ function LandingPage() {
           </div>
         </div>
 
-        {/* Footer */}
+     
         <footer className=" bg-opacity-20 text-gray-300 py-4 px-20">
       <div className="container mx-auto text-center border-t border-white pt-4">
         <p className="text-gray-300 text-lg font-bold mb-2">&copy; 2024 BookAI. All rights reserved.</p>
